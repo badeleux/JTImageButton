@@ -308,56 +308,52 @@
 
 - (void)setTitleColor:(UIColor *)titleColor {
     _titleColor = titleColor;
-    [self initialize];
 }
 
 - (void)setBgColor:(UIColor *)bgColor {
     _bgColor = bgColor;
-    [self initialize];
 }
 
 - (void)setPadding:(JTImageButtonPadding)padding {
     _padding = padding;
-    [self initialize];
 }
 
 - (void)setCornerRadius:(CGFloat)cornerRadius {
     _cornerRadius = fabs(cornerRadius);
-    [self initialize];
 }
 
 - (void)setBorderColor:(UIColor *)borderColor {
     _borderColor = borderColor;
-    [self initialize];
 }
 
 - (void)setBorderWidth:(CGFloat)borderWidth {
     _borderWidth = fabs(borderWidth);
-    [self initialize];
 }
 
 - (void)setIconSide:(JTImageButtonIconSide)iconSide {
     _iconSide = iconSide;
-    [self initialize];
 }
 
 - (void)setIconColor:(UIColor *)iconColor {
     _iconColor = iconColor;
-    [self initialize];
 }
 
 - (void)setHighlightAlpha:(CGFloat)highlightAlpha {
     _highlightAlpha = fabs(highlightAlpha);
-    [self initialize];
 }
 
 - (void)setDisableAlpha:(CGFloat)disableAlpha {
     _disableAlpha = fabs(disableAlpha);
-    [self initialize];
 }
 
 - (void)setTouchEffectEnabled:(BOOL)touchEffectEnabled {
     _touchEffectEnabled = touchEffectEnabled;
+}
+
+- (void)customize:(void(^)(JTImageButton*))customizeBlock {
+    if (customizeBlock) {
+        customizeBlock(self);
+    }
     [self initialize];
 }
 

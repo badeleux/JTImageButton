@@ -94,4 +94,6 @@ typedef enum {
  */
 - (void)createTitle:(NSString *)titleText withIcon:(UIImage *)iconImage font:(UIFont *)titleFont iconOffsetY:(CGFloat)iconOffsetY;
 
+- (void)customize:(void(^)(JTImageButton*))customizeBlock;
+
 @end
