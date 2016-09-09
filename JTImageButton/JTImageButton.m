@@ -80,7 +80,6 @@
     self.borderWidth = 1.0;
     self.cornerRadius = 3.0;
     
-    [self initialize];
 }
 
 - (void)createTitle:(NSString *)titleText withIcon:(UIImage *)iconImage font:(UIFont *)titleFont iconOffsetY:(CGFloat)iconOffsetY {
